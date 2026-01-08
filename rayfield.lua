@@ -1176,7 +1176,7 @@ end
 local function Hide(notify: boolean?)
 	if MPrompt then
 		MPrompt.Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-		MPrompt.Position = UDim2.new(0.5, 0, 1, 50)
+		MPrompt.Position = UDim2.new(0.5, 0, 1, -50)
 		MPrompt.AnchorPoint = Vector2.new(0, 0, 1, 0)
 		MPrompt.Size = UDim2.new(0, 40, 0, 10)
 		MPrompt.BackgroundTransparency = 1
