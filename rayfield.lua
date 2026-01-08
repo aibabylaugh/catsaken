@@ -1177,7 +1177,7 @@ local function Hide(notify: boolean?)
 	if MPrompt then
 		MPrompt.Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 		MPrompt.Position = UDim2.new(0.5, 0, 1, -50)
-		MPrompt.AnchorPoint = Vector2.new(0, 0, 1, 0)
+		MPrompt.AnchorPoint = Vector2.new(0.5, 0, 1, 0)
 		MPrompt.Size = UDim2.new(0, 40, 0, 10)
 		MPrompt.BackgroundTransparency = 1
 		MPrompt.Title.TextTransparency = 1
@@ -1207,7 +1207,7 @@ local function Hide(notify: boolean?)
 	TweenService:Create(dragBarCosmetic, TweenInfo.new(0.25, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {BackgroundTransparency = 1}):Play()
 
 	if useMobilePrompt and MPrompt then
-		TweenService:Create(MPrompt, TweenInfo.new(0.5, Enum.EasingStyle.Exponential), {Size = UDim2.new(0, 120, 0, 30), Position = UDim2.new(0.5, 0, 0, 20), BackgroundTransparency = 0.3}):Play()
+		TweenService:Create(MPrompt, TweenInfo.new(0.5, Enum.EasingStyle.Exponential), {Size = UDim2.new(0, 120, 0, 30), Position = UDim2.new(0.5, 0, 1, -50), BackgroundTransparency = 0.3}):Play()
 		TweenService:Create(MPrompt.Title, TweenInfo.new(0.5, Enum.EasingStyle.Exponential), {TextTransparency = 0.3}):Play()
 	end
 
