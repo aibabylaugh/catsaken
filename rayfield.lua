@@ -1109,7 +1109,7 @@ function RayfieldLibrary:Notify(data) -- action e.g open messages
 			newNotification:Destroy()
 		end
 
-		local clickBox = Instance.new("TextButton")
+		local clickBox = Instance.new("TextButton", newNotification)
 		clickBox.Size = UDim2.new(1, 0, 1, 0)
 		clickBox.Text = ""
 		clickBox.ZIndex = 999
