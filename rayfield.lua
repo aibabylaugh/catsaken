@@ -2798,9 +2798,12 @@ function RayfieldLibrary:CreateWindow(Settings)
 				TweenService:Create(Dropdown, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {BackgroundColor3 = SelectedTheme.ElementBackground}):Play()
 			end)
 
+			local balls = {}
+			DropdownSettings.__DropdownOptions = balls
 			local function SetDropdownOptions()
 				for _, Option in ipairs(DropdownSettings.Options) do
 					local DropdownOption = Elements.Template.Dropdown.List.Template:Clone()
+					balls[_] = DropdownOption
 					DropdownOption.Name = Option
 					DropdownOption.Title.Text = Option
 					DropdownOption.Parent = Dropdown.List
