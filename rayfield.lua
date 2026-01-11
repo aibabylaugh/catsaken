@@ -2930,6 +2930,11 @@ function RayfieldLibrary:CreateWindow(Settings)
 				end
 			end
 
+			function DropdownSettings:SetTitle(NewTitle)
+				Dropdown.Title.Text = NewTitle
+				Dropdown.Name = NewTitle
+			end
+
 			function DropdownSettings:Set(NewOption)
 				DropdownSettings.CurrentOption = NewOption
 
