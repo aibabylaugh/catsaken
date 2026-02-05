@@ -345,6 +345,9 @@ function DrawingLib.new(drawingType)
 						return squareObj:Remove()
 					end
 				end
+				if index == "__Frame" then
+					return squareFrame
+				end
 				return squareObj[index]
 			end,
 			__tostring = function() return "Drawing" end
