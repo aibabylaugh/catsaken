@@ -1542,6 +1542,9 @@ end
 
 
 function RayfieldLibrary:CreateWindow(Settings)
+	Rayfield.PcSizeX.Value = Settings.SizeSettings[1]
+	Rayfield.PcSizeY.Value = Settings.SizeSettings[2]
+	Rayfield.MobileSizeX.Value = Settings.SizeSettings[1]
 	--print('creating window')
 	if getgenv then getgenv().rayfieldCached = true end
 
