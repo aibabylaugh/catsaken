@@ -691,8 +691,8 @@ local dragBar = Rayfield:FindFirstChild('Drag')
 local dragInteract = dragBar and dragBar.Interact or nil
 local dragBarCosmetic = dragBar and dragBar.Drag or nil
 
-local dragOffset = (Rayfield.PcSizeY.Value / 2) + 20
-local dragOffsetMobile = (Rayfield.MobileSizeY.Value / 2) + 20
+local dragOffset
+local dragOffsetMobile
 
 Rayfield.DisplayOrder = 100
 LoadingFrame.Version.Text = Release
@@ -1545,6 +1545,8 @@ function RayfieldLibrary:CreateWindow(Settings)
 	Rayfield.PcSizeX.Value = Settings.SizeSettings[1]
 	Rayfield.PcSizeY.Value = Settings.SizeSettings[2]
 	Rayfield.MobileSizeX.Value = Settings.SizeSettings[1]
+	dragOffset = (Rayfield.PcSizeY.Value / 2) + 20
+	dragOffsetMobile = (Rayfield.MobileSizeY.Value / 2) + 20
 	--print('creating window')
 	if getgenv then getgenv().rayfieldCached = true end
 
