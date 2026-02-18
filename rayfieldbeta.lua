@@ -610,7 +610,7 @@ local CoreGui = getService("CoreGui")
 
 -- Interface Management
 
-local Rayfield = useStudio and Players.LocalPlayer:WaitForChild("PlayerGui"):WaitForChild('Rayfield') or game:GetObjects("rbxassetid://79526290138320")[1]
+local Rayfield = useStudio and Players.LocalPlayer:WaitForChild("PlayerGui"):WaitForChild('Rayfield') or game:GetObjects("rbxassetid://109316597547630")[1]
 local buildAttempts = 0
 local correctBuild = false
 local warned
@@ -631,7 +631,7 @@ repeat
 		warned = true
 	end
 
-	toDestroy, Rayfield = Rayfield, useStudio and Players.LocalPlayer:WaitForChild("PlayerGui"):WaitForChild('Rayfield') or game:GetObjects("rbxassetid://79526290138320")[1]
+	toDestroy, Rayfield = Rayfield, useStudio and Players.LocalPlayer:WaitForChild("PlayerGui"):WaitForChild('Rayfield') or game:GetObjects("rbxassetid://109316597547630")[1]
 	if toDestroy and not useStudio then toDestroy:Destroy() end
 
 	buildAttempts = buildAttempts + 1
