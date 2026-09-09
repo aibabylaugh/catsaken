@@ -10,6 +10,7 @@
 
 ]]
 
+debugX = true
 if debugX then
 	warn('Initialising Rayfield')
 end
