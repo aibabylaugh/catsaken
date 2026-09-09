@@ -643,7 +643,7 @@ Rayfield.Enabled = false
 if identifyexecutor and identifyexecutor() == "Cosmic" then
 	Rayfield.Parent = Players.LocalPlayer:WaitForChild("PlayerGui")
 else
-	Rayfield.Parent = Players.LocalPlayer:WaitForChild("PlayerGui")
+	Rayfield.Parent = gethui()
 	Rayfield.DisplayOrder = 99999999
 end
 
