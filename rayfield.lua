@@ -642,16 +642,8 @@ Rayfield.Enabled = false
 if identifyexecutor and identifyexecutor() == "Cosmic" then
 	Rayfield.Parent = Players.LocalPlayer:WaitForChild("PlayerGui")
 else
-	if gethui then
-		Rayfield.Parent = gethui()
-	elseif syn and syn.protect_gui then 
-		syn.protect_gui(Rayfield)
-		Rayfield.Parent = CoreGui
-	elseif not useStudio and CoreGui:FindFirstChild("RobloxGui") then
-		Rayfield.Parent = CoreGui:FindFirstChild("RobloxGui")
-	elseif not useStudio then
-		Rayfield.Parent = CoreGui
-	end
+	Rayfield.Parent = Players.LocalPlayer:WaitForChild("PlayerGui")
+	Rayfield.DisplayOrder = 99999999
 end
 
 if gethui then
