@@ -1,3 +1,18 @@
+local LogService = game:GetService("LogService")
+local ContentProvider = game:GetService('ContentProvider')
+local Lighting = game:GetService('Lighting')
+local RunService = game:GetService('RunService')
+local HttpService = game:GetService('HttpService')
+local Players = game:GetService('Players')
+local ReplicatedStorage = game:GetService('ReplicatedStorage')
+local Stats = game:GetService('Stats')
+local TweenService = game:GetService('TweenService')
+local VirtualInputManager = game:GetService('VirtualInputManager')
+local GuiService = game:GetService('GuiService')
+local UserInputService = game:GetService('UserInputService')
+local LocalPlayer = Players.LocalPlayer
+local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
+
 return (function()
     if isfile("catsakenconfigs.json") then
         print("catsakenconfigs.json exists, loading " .. SaveFileName)
