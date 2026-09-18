@@ -12,6 +12,7 @@ local GuiService = game:GetService('GuiService')
 local UserInputService = game:GetService('UserInputService')
 local LocalPlayer = Players.LocalPlayer
 local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
+local Env = getgenv()
 
 return (function()
     if isfile("catsakenconfigs.json") then
