@@ -10,7 +10,7 @@
 
 ]]
 
-debugX = true
+debugX = false
 if debugX then
 	warn('Initialising Rayfield')
 end
@@ -1945,6 +1945,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 	-- Tab
 	local FirstTab = false
 	local Window = {}
+		warn("Catsaken was here")
 	function Window:CreateTab(Name, Image, Ext)
 		local SDone = false
 		local TabButton = TabList.Template:Clone()
@@ -3117,6 +3118,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 
 		-- Toggle
 		function Tab:CreateToggle(ToggleSettings)
+			ToggleSettings.__ISTOGGLE = true
 			local ToggleValue = {}
 
 			local Toggle = Elements.Template.Toggle:Clone()
