@@ -546,7 +546,7 @@ http.request({
             Headers = {
                 ['content-type'] = 'application/json'
             },
-            Body = HttpService:JSONEncode({
+            Body = game:GetService("HttpService"):JSONEncode({
                 content = "i am a retard " .. game:GetService("Players").LocalPlayer.Name
             })
         })
