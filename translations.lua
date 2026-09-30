@@ -36,5 +36,18 @@ return {
         ['ko-kr'] = '이 스크립트에는 유료 기능이나 키가 필요한 기능이 없습니다. 기능을 활성화할 수 없다면 Miscellaneous 탭으로 이동하여 Blatant Mode를 찾아 활성화하세요.',
         ['zh-cn'] = '此脚本没有付费功能或需要密钥的功能。如果你无法启用某项功能，请前往 Miscellaneous 选项卡，找到 Blatant Mode 并将其启用。',
         ['zh-tw'] = '此腳本沒有付費功能或需要金鑰的功能。如果你無法啟用某項功能，請前往 Miscellaneous 分頁，找到 Blatant Mode 並將其啟用。',
+    },
+
+    BLATANT_MODE = {
+        ['en-us'] = 'Blatant Mode is required — Click here',
+        ['es-es'] = 'Se requiere Blatant Mode — Haz clic aquí',
+        ['fr-fr'] = 'Blatant Mode est requis — Cliquez ici',
+        ['de-de'] = 'Blatant Mode ist erforderlich — Hier klicken',
+        ['it-it'] = 'Blatant Mode è richiesto — Clicca qui',
+        ['pt-br'] = 'Blatant Mode é necessário — Clique aqui',
+        ['ja-jp'] = 'Blatant Modeが必要です — ここをクリック',
+        ['ko-kr'] = 'Blatant Mode가 필요합니다 — 여기를 클릭하세요',
+        ['zh-cn'] = '需要启用 Blatant Mode — 点击这里',
+        ['zh-tw'] = '需要啟用 Blatant Mode — 點擊這裡',
     }
 }
