@@ -3813,7 +3813,7 @@ local menus = {
         return u1;
     end)(),
     Rules = (function()
-        local script = ReplicatedStorage.Menus.Rules
+        local script = ReplicatedStorage.Systems.Player.UI.Menus.Rules
         local UpdatelogPresets = ReplicatedStorage.Assets.UI.UpdatelogPresets;
         local TweenInfo_new_ret = TweenInfo.new(0.2);
         local u1 = {};
