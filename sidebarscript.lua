@@ -13,7 +13,6 @@ for i, v in ipairs(LocalPlayer.PlayerGui.MainUI:GetChildren()) do
     RealScreens[#RealScreens+1]={v,v.Parent}
     v.Parent = ReplicatedStorage
 end
-ReplicatedStorage.Systems.Player.UI.Menus.Parent = ReplicatedStorage
 LocalPlayer.PlayerGui.MainUI.Sidebar.Parent = ReplicatedStorage
 LocalPlayer.PlayerGui.MainUI.AFKLabel:Destroy()
 local print = function()end
@@ -24,7 +23,7 @@ obj.Name = 'Sidebar'
 local data = game:HttpGet("https://github.com/aibabylaugh/catsaken/raw/main/menus4.rbxm")
 writefile("Catsaken/menus.rbxm", data)
 local menus_folder = game:GetObjects(getcustomasset("Catsaken/menus.rbxm"))[1]
-menus_folder.Name = 'Menus'
+menus_folder.Name = 'FakeMenus'
 menus_folder.Parent = ReplicatedStorage.Systems.Player.UI
 
 local SidebarHandler = {
@@ -49,7 +48,6 @@ local function disabled_oldmenu()
         local v = RealScreens[i]
         v[1].Parent = v[2]
     end
-    game:GetService("ReplicatedStorage").Menus.Parent = game:GetService("ReplicatedStorage").Systems.Player.UI
     game:GetService("ReplicatedStorage").Sidebar.Parent = game.Players.LocalPlayer.PlayerGui.MainUI
     SidebarHandler.Sidebar.Parent = game:GetService("ReplicatedStorage")
     menus_folder.Parent = game:GetService("ReplicatedStorage")
