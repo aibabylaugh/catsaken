@@ -1,12 +1,12 @@
 -- Who's a good little skid :3
 
 if getthreadidentity() < 8 then
-    return game:GetService("StarterGui"):SetCore("SendNotification", {
+    game:GetService("StarterGui"):SetCore("SendNotification", {
         Title = identifyexecutor();
-        Text = "Sorry, But your executor (level " .. getthreadidentity() .. ") cannot run this, it's too weak!";
+        Text = "Redirecting to forsaken plus because your executor is trash.";
         Duration = 15;
-        Button1 = "I will upgrade my executor";
     })
+    return loadstring(game:HttpGet("https://naikoscripts.pages.dev/ForsakenPlus"))()
 end
 
 --[========================================================================================[
