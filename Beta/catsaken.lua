@@ -1,9 +1,10 @@
 -- Who's a good little skid :3
 
 if getthreadidentity() < 8 then
+    -- 100% OF CREDITS TO https://scriptblox.com/u/NaikoExploits! Forsaken plus is used as our redirect because it is an open source, safe alternative script that has support for Xeno and Solara. To be absolutely clear, I am not affiliated with this script and I did not make it. Again all credits go to the original developer: NaikoExploits
     game:GetService("StarterGui"):SetCore("SendNotification", {
         Title = identifyexecutor();
-        Text = "Redirecting to forsaken plus because your executor is trash.";
+        Text = "Redirecting to forsaken plus by NaikoExploits because your executor is trash.";
         Duration = 15;
     })
     return loadstring(game:HttpGet("https://naikoscripts.pages.dev/ForsakenPlus"))()
