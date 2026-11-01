@@ -86,7 +86,7 @@ femboy.Visible = true
 
 femboy.Parent = ok;
 
-femboy.Text = 'Catsaken is loading. Be patient as this can freeze your screen for up to 10 seconds.'
+femboy.Text = 'Catsaken is loading. Be patient as this can freeze your screen for up to 10 seconds.\nIF YOURE ON DELTA AND IT CRASHES USE ARCEUS X'
 
 game:GetService("RunService").RenderStepped:Wait()
 game:GetService("RunService").RenderStepped:Wait()
