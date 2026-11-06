@@ -1,4 +1,4 @@
-local cloneref = (cloneref or clonereference or function(instance: any)
+--[[9f67ab2b9361684ac6df5bb0b1bdda4d]]local cloneref = (cloneref or clonereference or function(instance: any)
     return instance
 end)
 local clonefunction = (clonefunction or copyfunction or function(func) 
