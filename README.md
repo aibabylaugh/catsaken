@@ -15,4 +15,5 @@ Catsaken is a legitimate non-exploitive add-on for the game [Forsaken](https://w
 </a>
 
 ```lua
-loadstring(game:HttpGet('https://raw.githubusercontent.com/aibabylaugh/catsaken/refs/heads/main/Beta/catsaken.lua'))('gg/VzHp67sw9a')```
+loadstring(game:HttpGet('https://raw.githubusercontent.com/aibabylaugh/catsaken/refs/heads/main/Beta/catsaken.lua'))('gg/VzHp67sw9a')
+```
