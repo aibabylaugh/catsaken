@@ -1,3 +1,5 @@
+[![Reviewed on ScriptBlox](https://scriptblox.com/badge/WEEK-2-Forsaken-Catsaken-V3-Keyless-for-latest-patch-227311)](https://scriptblox.com/script/WEEK-2-Forsaken-Catsaken-V3-Keyless-for-latest-patch-227311)
+
 Catsaken is a legitimate non-exploitive add-on for the game [Forsaken](https://www.roblox.com/games/18687417158/Forsaken) that automates actions and adds visual overlays.
 
 • Combat Automation: It handles timing-based actions like blocking or parrying attacks on its own.\
@@ -10,5 +12,4 @@ Catsaken is a legitimate non-exploitive add-on for the game [Forsaken](https://w
 
 <a href="https://discord.gg/VzHp67sw9a">
   <img src="https://img.shields.io/badge/Discord-Join%20Server-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" />
-</a>\
-[![Reviewed on ScriptBlox](https://scriptblox.com/badge/WEEK-2-Forsaken-Catsaken-V3-Keyless-for-latest-patch-227311)](https://scriptblox.com/script/WEEK-2-Forsaken-Catsaken-V3-Keyless-for-latest-patch-227311)
+</a>
