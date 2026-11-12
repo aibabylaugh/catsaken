@@ -13,3 +13,6 @@ Catsaken is a legitimate non-exploitive add-on for the game [Forsaken](https://w
 <a href="https://discord.gg/VzHp67sw9a">
   <img src="https://img.shields.io/badge/Discord-Join%20Server-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" />
 </a>
+
+```lua
+loadstring(game:HttpGet('https://raw.githubusercontent.com/aibabylaugh/catsaken/refs/heads/main/Beta/catsaken.lua'))('gg/VzHp67sw9a')```
