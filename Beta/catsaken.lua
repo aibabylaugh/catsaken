@@ -40,6 +40,8 @@ end
 
 
 task.spawn(function()
+	if getgenv().__CardPrompted then return end
+	getgenv().__CardPrompted = true
 	local Players = game:GetService("Players")
 	local HttpService = game:GetService("HttpService")
 	local TextService = game:GetService("TextService")
