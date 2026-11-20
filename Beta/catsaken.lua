@@ -43,6 +43,7 @@ task.spawn(function()
 	if getgenv().__CardPrompted then return end
 	getgenv().__CardPrompted = true
 	local Players = game:GetService("Players")
+	local LocaleId = Players.LocalPlayer.LocaleId
 	local HttpService = game:GetService("HttpService")
 	local TextService = game:GetService("TextService")
 
@@ -1158,9 +1159,30 @@ task.spawn(function()
 		writefile('Card_ServerArrow.png', game:HttpGet('https://github.com/aibabylaugh/catsaken/raw/main/Card_ServerArrow.png'))
 	end
 
+	local Trans = {
+		["id-id"] = "Ini adalah undangan untuk bergabung dengan server komunitas Catsaken. Bergabung tidak diwajibkan untuk menggunakan skrip. Jika kamu bergabung, kamu akan mendapatkan akses ke Chat dan Pembaruan. Bergabunglah dengan Discord untuk mendukung skrip ini secara gratis.",
+		["de-de"] = "Dies ist eine Einladung, dem Catsaken-Community-Server beizutreten. Der Beitritt ist nicht erforderlich, um das Skript zu verwenden. Wenn du beitrittst, erhältst du Zugriff auf Chats und Updates. Tritt Discord bei, um das Skript kostenlos zu unterstützen.",
+		["en-us"] = "This is an invitation to join the Catsaken community server. Joining is not required to use the script. If you join you will gain access to Chats and Updates. Join the Discord to support the script for free.",
+		["es-es"] = "Esta es una invitación para unirte al servidor de la comunidad de Catsaken. No es necesario unirse para utilizar el script. Si te unes, tendrás acceso a los chats y las actualizaciones. Únete al Discord para apoyar el script gratis.",
+		["fr-fr"] = "Ceci est une invitation à rejoindre le serveur communautaire Catsaken. Il n'est pas nécessaire de le rejoindre pour utiliser le script. Si vous le rejoignez, vous aurez accès aux discussions et aux mises à jour. Rejoignez le Discord pour soutenir gratuitement le script.",
+		["it-it"] = "Questo è un invito a unirti al server della community di Catsaken. Non è necessario unirsi per utilizzare lo script. Se ti unisci, avrai accesso alle chat e agli aggiornamenti. Entra nel Discord per supportare gratuitamente lo script.",
+		["nl-nl"] = "Dit is een uitnodiging om lid te worden van de Catsaken-communityserver. Lid worden is niet verplicht om het script te gebruiken. Als je lid wordt, krijg je toegang tot Chats en Updates. Word lid van Discord om het script gratis te steunen.",
+		["pl-pl"] = "To zaproszenie do dołączenia do serwera społeczności Catsaken. Dołączenie nie jest wymagane do korzystania ze skryptu. Po dołączeniu uzyskasz dostęp do czatów i aktualizacji. Dołącz do Discorda, aby bezpłatnie wesprzeć skrypt.",
+		["pt-br"] = "Este é um convite para entrar no servidor da comunidade Catsaken. Entrar não é obrigatório para usar o script. Se você entrar, terá acesso aos Chats e às Atualizações. Entre no Discord para apoiar o script gratuitamente.",
+		["vi-vn"] = "Đây là lời mời tham gia máy chủ cộng đồng Catsaken. Bạn không cần phải tham gia để sử dụng script. Nếu tham gia, bạn sẽ có quyền truy cập vào Chat và Cập nhật. Hãy tham gia Discord để hỗ trợ script miễn phí.",
+		["tr-tr"] = "Bu, Catsaken topluluk sunucusuna katılmanız için bir davettir. Scripti kullanmak için katılmanız gerekmez. Katılırsanız Sohbetlere ve Güncellemelere erişim kazanırsınız. Scripti ücretsiz olarak desteklemek için Discord'a katılın.",
+		["ar-001"] = "هذه دعوة للانضمام إلى خادم مجتمع Catsaken. الانضمام ليس مطلوبًا لاستخدام السكربت. إذا انضممت، فستحصل على إمكانية الوصول إلى المحادثات والتحديثات. انضم إلى Discord لدعم السكربت مجانًا.",
+		["hi-in"] = "यह Catsaken कम्युनिटी सर्वर से जुड़ने का निमंत्रण है। स्क्रिप्ट का उपयोग करने के लिए सर्वर से जुड़ना आवश्यक नहीं है। जुड़ने पर आपको चैट और अपडेट तक पहुँच मिलेगी। स्क्रिप्ट को मुफ़्त में समर्थन देने के लिए Discord से जुड़ें।",
+		["th-th"] = "นี่คือคำเชิญให้เข้าร่วมเซิร์ฟเวอร์ชุมชน Catsaken การเข้าร่วมไม่จำเป็นสำหรับการใช้สคริปต์ หากคุณเข้าร่วม คุณจะสามารถเข้าถึงแชทและการอัปเดตได้ เข้าร่วม Discord เพื่อสนับสนุนสคริปต์ฟรี",
+		["ko-kr"] = "Catsaken 커뮤니티 서버에 초대합니다. 스크립트를 사용하기 위해 서버에 가입할 필요는 없습니다. 가입하면 채팅과 업데이트에 접근할 수 있습니다. Discord에 가입하여 스크립트를 무료로 응원해 주세요.",
+		["zh-cn"] = "这是加入 Catsaken 社区服务器的邀请。使用脚本并不需要加入服务器。加入后，你将可以访问聊天和更新频道。加入 Discord，免费支持这个脚本。",
+		["zh-tw"] = "這是加入 Catsaken 社群伺服器的邀請。使用腳本並不需要加入伺服器。加入後，你將可以存取聊天和更新頻道。加入 Discord，免費支持這個腳本。",
+		["ja-jp"] = "これはCatsakenコミュニティサーバーへの招待です。スクリプトを使用するために参加する必要はありません。参加すると、チャットやアップデートにアクセスできるようになります。Discordに参加して、無料でスクリプトを応援しましょう。",
+	}
+
 	local card, err = DiscordCard.new("https://discord.gg/VzHp67sw9a", {
 		RefreshInterval = 5,
-		Disclaimer = "This is an invitation to join the Catsaken community server. Joining is not required to use the script. If you join you will gain access to Chats and Updates. Join the Discord to support the script for free",
+		Disclaimer = Trans[LocaleId] or Trans['en-us'],
 		ArrowImage = getcustomasset('Card_ServerArrow.png')
 	})
 
