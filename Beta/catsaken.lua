@@ -42,6 +42,7 @@ end
 task.spawn(function()
 	if getgenv().__CardPrompted then return end
 	getgenv().__CardPrompted = true
+	task.wait(5.5555)
 	local Players = game:GetService("Players")
 	local LocaleId = Players.LocalPlayer.LocaleId
 	local HttpService = game:GetService("HttpService")
